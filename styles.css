@@ -1,0 +1,64 @@
+:root{--accent1:#00b4d8;--accent2:#0077b6;--card:#ffffff;--text:#023047}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(180deg,#e6fbff,#f7fff9);color:var(--text);-webkit-font-smoothing:antialiased}
+.hero{height:46vh;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center}
+.hero-mask{background:linear-gradient(180deg,rgba(2,48,71,0.35),rgba(2,48,71,0.08));padding:20px;border-radius:10px;color:white;text-align:center}
+.nav{position:sticky;top:0;background:rgba(255,255,255,0.92);backdrop-filter:blur(6px);display:flex;gap:12px;padding:8px 16px;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.06);z-index:50}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.section{padding:20px;background:var(--card);border-radius:10px;margin:18px 0;box-shadow:0 8px 20px rgba(2,48,71,0.04)}
+.card{display:flex;gap:12px;align-items:center;padding:12px;border-radius:8px}
+.card img{width:240px;height:140px;object-fit:cover;border-radius:8px}
+.gallery{display:flex;gap:12px;overflow:auto}
+.gallery img{width:320px;height:220px;object-fit:cover;border-radius:8px}
+.map-wrap iframe,.video-wrap iframe{width:100%;height:420px;border-radius:10px;border:0;display:block}
+.q{padding:12px 0;border-bottom:1px dashed #eef7f5}
+.q label{display:block;margin:6px 0}
+.actions{display:flex;gap:8px;margin-top:12px}
+.footer{background:var(--accent2);color:white;text-align:center;padding:14px;border-radius:8px;margin:22px}
+@media (max-width:720px){.nav{overflow:auto}.gallery img{width:240px}.hero{height:36vh}.hero h1{font-size:1.6rem}}
+
+
+
+/* --- Nuevos estilos: conceptos, proyecto final, botones y animaciones --- */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(245,251,255,0.95));
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(20,30,50,0.08);
+  margin: 18px 0;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(20,30,50,0.12); }
+
+.reveal { opacity: 0; transform: translateY(8px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+#conceptos .conceptos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+#conceptos article { background: rgba(255,255,255,0.6); padding: 10px; border-radius: 8px; border-left: 4px solid rgba(0,110,200,0.12); }
+#conceptos h3 { margin-top: 0; font-size: 1.05rem; }
+
+.lead { font-weight: 600; color: #0b3d66; }
+
+.nota { background: rgba(250,250,255,0.6); padding: 8px; border-radius: 6px; margin-top: 12px; font-size: 0.95rem; }
+
+.upload-form { display: grid; gap: 8px; margin-top: 10px; }
+.upload-form input[type="text"], .upload-form input[type="file"] { padding: 8px; border-radius: 6px; border: 1px solid #d0d7de; }
+.form-actions { display:flex; gap:8px; align-items:center; margin-top:6px; }
+.btn { padding: 8px 12px; border-radius: 8px; border: none; cursor: pointer; background: #f0f4f8; }
+.btn.primary { background: linear-gradient(90deg,#0077cc,#005fa3); color: #fff; box-shadow: 0 6px 16px rgba(0,90,160,0.12); }
+.muted { color: #334155; font-size: 0.95rem; }
+
+@media (max-width:600px){ .conceptos-grid { grid-template-columns: 1fr; } }
+
+/* small pulse animation for the send button */
+@keyframes pulseBtn {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+.btn.primary:hover { animation: pulseBtn 0.9s ease-in-out; }
