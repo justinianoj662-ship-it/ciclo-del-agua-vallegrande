@@ -10,7 +10,6 @@ body{margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(180deg
 .card img{width:240px;height:140px;object-fit:cover;border-radius:8px}
 .gallery{display:flex;gap:12px;overflow:auto}
 .gallery img{width:320px;height:220px;object-fit:cover;border-radius:8px}
-.map-wrap iframe,.video-wrap iframe{width:100%;height:420px;border-radius:10px;border:0;display:block}
 .q{padding:12px 0;border-bottom:1px dashed #eef7f5}
 .q label{display:block;margin:6px 0}
 .actions{display:flex;gap:8px;margin-top:12px}
