@@ -103,3 +103,38 @@ body{margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(180deg
   margin-bottom: 10px;
   font-weight: 600;
 }
+/* === Mejora Galería: responsiva, apilada en móvil, más grande y con efecto === */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 380px;              /* Tamaño más grande y natural */
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 180, 216, 0.15);  /* Borde sutil con tu color accent1 */
+}
+
+.gallery img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 720px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery img {
+    max-width: 100%;             /* Ocupa casi todo el ancho en celular */
+    border-radius: 10px;
+  }
+}
