@@ -138,3 +138,21 @@ body{margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(180deg
     border-radius: 10px;
   }
 }
+.footer {
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 50px;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -6px 16px rgba(0,0,0,0.1);
+  font-size: 0.95rem;
+}
+
+.footer p {
+  margin: 8px 0;
+}
+
+.footer strong {
+  font-size: 1.1rem;
+}
